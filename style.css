@@ -269,3 +269,29 @@ font-size:40px;
 }
 
 }
+#calendar-container{
+background:white;
+padding:30px;
+border-radius:28px;
+box-shadow:0 10px 40px rgba(0,0,0,.05);
+}
+
+.fc-toolbar-title{
+font-size:28px !important;
+font-family:'Playfair Display',serif;
+}
+
+.fc-button{
+background:black !important;
+border:none !important;
+padding:10px 18px !important;
+border-radius:999px !important;
+}
+
+.fc-daygrid-day{
+transition:.2s;
+}
+
+.fc-daygrid-day:hover{
+background:#fafafa;
+}
