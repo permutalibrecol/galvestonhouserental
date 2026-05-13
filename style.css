@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Coastal Escape | Galveston Beach Stay</title>
+    <meta name="description" content="Luxury coastal vacation rental in Galveston, Texas. Spacious interiors, elegant design, premium comfort and unforgettable beach getaway experience.">
+    
+    <link rel="preconnect" href="googleapis.com">
+    <link rel="preconnect" href="gstatic.com" crossorigin>
+    <link href="googleapis.com" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="jsdelivr.net" rel="stylesheet">
+</head>
+<body>
 
+    <!-- BOTÓN DE LLAMADA DIRECTA FIJO -->
+    <a href="tel:+12819780398" class="btn-llamada-fijo">
+        📞 Llamar a Maribel
+    </a>
+
+    <!-- HERO / PORTADA SECCIÓN -->
+    <section class="hero-luxury">
+        <div class="hero-overlay"></div>
+        <div class="hero-container">
+            <p class="hero-subtitulo">GALVESTON • TEXAS</p>
+            <h1 class="hero-titulo">Luxury Coastal Escape</h1>
+            <p class="hero-texto">Experience a beautifully designed beach getaway with spacious living areas, premium comfort and unforgettable coastal vibes.</p>
+            <div class="hero-acciones">
+                <a href="#gallery" class="btn-principal">Explore Property</a>
+                <a href="airbnb.com" target="_blank" class="btn-secundario">Reserve on Airbnb</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPROBACIÓN SOCIAL / DATOS -->
+    <section class="metricas-barra">
+        <div class="metrica-item">
+            <h2>4 Bedrooms</h2>
+            <p>Perfect for families & groups</p>
+        </div>
+        <div class="metrica-item divisor">
+            <h2>Premium Stay</h2>
+            <p>Elegant interiors & comfort</p>
+        </div>
+        <div class="metrica-item">
+            <h2>Coastal Experience</h2>
+            <p>Relax, recharge & reconnect</p>
+        </div>
+    </section>
+
+    <!-- GALERÍA ULTRA RESPONSIVA -->
+    <section id="gallery" class="seccion-galeria">
+        <h2 class="titulo-seccion">Take a visual tour</h2>
+        <div class="cuadricula-responsiva">
+            <div class="contenedor-foto"><img src="assets/Exterior.avif"></div>
+            <div class="contenedor-foto"><img src="assets/Fly view.avif"></div>
+            <div class="contenedor-foto"><img src="assets/Living room.avif"></div>
+            <div class="contenedor-foto"><img src="assets/Dining area.avif"></div>
+            <div class="contenedor-foto"><img src="assets/Full kitchen.avif"></div>
+            <div class="contenedor-foto"><img src="assets/Workspace.avif"></div>
+        </div>
+    </section>
+
+    <!-- CALENDARIO -->
+    <section class="seccion-calendario">
+        <h2 class="titulo-seccion">Availability</h2>
+        <div id="calendar-container"></div>
+    </section>
+
+    <script src="jsdelivr.net"></script>
+    <script src="availability.js"></script>
+</body>
+</html>
