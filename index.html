@@ -6,244 +6,69 @@
     <title>Luxury Coastal Escape | Galveston Beach Stay</title>
     <meta name="description" content="Luxury coastal vacation rental in Galveston, Texas. Spacious interiors, elegant design, premium comfort and unforgettable beach getaway experience.">
     
-    <!-- Fuentes de Lujo -->
     <link rel="preconnect" href="googleapis.com">
     <link rel="preconnect" href="gstatic.com" crossorigin>
     <link href="googleapis.com" rel="stylesheet">
     
-    <!-- Tailwind CSS CDN -->
-    <script src="tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <!-- FullCalendar CSS -->
+    <link rel="stylesheet" href="style.css">
     <link href="jsdelivr.net" rel="stylesheet">
-
-    <style>
-        html { scroll-behavior: smooth; }
-        /* Estilos para el botón flotante de llamada */
-        .call-button {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            background-color: #1e3a8a; /* Azul sofisticado */
-            color: white;
-            padding: 16px 28px;
-            border-radius: 50px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-            z-index: 1000;
-            font-weight: 600;
-            letter-spacing: 0.05em;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            font-size: 14px;
-        }
-        .call-button:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
-            background-color: #1d4ed8;
-        }
-    </style>
 </head>
-<body class="bg-stone-50 text-stone-800 font-sans antialiased">
+<body>
 
-    <!-- BOTÓN FLOTANTE: LLAMADA DIRECTA A MARIBEL -->
-    <a href="tel:+12819780398" class="call-button flex items-center gap-2">
-        <svg xmlns="w3.org" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.3 11.3 0 005.455 5.456l.773-1.548a1 1 0 011.06-.539l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-        </svg>
-        Llamar a Maribel
+    <!-- BOTÓN DE LLAMADA DIRECTA FIJO -->
+    <a href="tel:+12819780398" class="btn-llamada-fijo">
+        📞 Llamar a Maribel
     </a>
 
-    <!-- HERO SECTION (IMPACTANTE Y RESPONSIVO) -->
-    <section class="relative h-screen flex items-center justify-center bg-zinc-900 text-white overflow-hidden">
-        <!-- Reemplaza esta URL de Unsplash por tu foto de portada si lo deseas -->
-        <div class="absolute inset-0 bg-[url('unsplash.com')] bg-cover bg-center opacity-40 scale-105 transition-transform duration-1000"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent"></div>
-        
-        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-            <p class="tracking-[0.3em] text-xs md:text-sm font-semibold uppercase text-stone-300 mb-4">
-                GALVESTON • TEXAS
-            </p>
-            <h1 class="font-serif text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-none">
-                Luxury Coastal Escape
-            </h1>
-            <p class="text-lg md:text-xl text-stone-200 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
-                Experience a beautifully designed beach getaway with spacious living areas, premium comfort and unforgettable coastal vibes.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="#gallery" class="w-full sm:w-auto px-8 py-4 bg-white text-stone-950 font-medium rounded-sm hover:bg-stone-200 transition tracking-wide text-sm uppercase">
-                    Explore Property
-                </a>
-                <a href="airbnb.com" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-transparent border border-white text-white font-medium rounded-sm hover:bg-white/10 transition tracking-wide text-sm uppercase">
-                    Reserve on Airbnb
-                </a>
+    <!-- HERO / PORTADA SECCIÓN -->
+    <section class="hero-luxury">
+        <div class="hero-overlay"></div>
+        <div class="hero-container">
+            <p class="hero-subtitulo">GALVESTON • TEXAS</p>
+            <h1 class="hero-titulo">Luxury Coastal Escape</h1>
+            <p class="hero-texto">Experience a beautifully designed beach getaway with spacious living areas, premium comfort and unforgettable coastal vibes.</p>
+            <div class="hero-acciones">
+                <a href="#gallery" class="btn-principal">Explore Property</a>
+                <a href="airbnb.com" target="_blank" class="btn-secundario">Reserve on Airbnb</a>
             </div>
         </div>
     </section>
 
-    <!-- METRICS / SOCIAL PROOF -->
-    <section class="bg-stone-900 text-stone-100 py-12 border-b border-stone-800">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center px-6">
-            <div class="space-y-1">
-                <h2 class="font-serif text-3xl font-semibold text-white">4 Bedrooms</h2>
-                <p class="text-stone-400 text-sm font-light">Perfect for families & groups</p>
-            </div>
-            <div class="space-y-1 border-y md:border-y-0 md:border-x border-stone-800 py-6 md:py-0">
-                <h2 class="font-serif text-3xl font-semibold text-white">Premium Stay</h2>
-                <p class="text-stone-400 text-sm font-light">Elegant interiors & comfort</p>
-            </div>
-            <div class="space-y-1">
-                <h2 class="font-serif text-3xl font-semibold text-white">Coastal Experience</h2>
-                <p class="text-stone-400 text-sm font-light">Relax, recharge & reconnect</p>
-            </div>
+    <!-- COMPROBACIÓN SOCIAL / DATOS -->
+    <section class="metricas-barra">
+        <div class="metrica-item">
+            <h2>4 Bedrooms</h2>
+            <p>Perfect for families & groups</p>
+        </div>
+        <div class="metrica-item divisor">
+            <h2>Premium Stay</h2>
+            <p>Elegant interiors & comfort</p>
+        </div>
+        <div class="metrica-item">
+            <h2>Coastal Experience</h2>
+            <p>Relax, recharge & reconnect</p>
         </div>
     </section>
 
-    <!-- EXPERIENCE / CARACTERÍSTICAS -->
-    <section class="py-20 max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div class="space-y-6 order-2 lg:order-1">
-            <h2 class="font-serif text-4xl md:text-5xl font-bold tracking-tight text-stone-900">
-                Designed for unforgettable stays
-            </h2>
-            <p class="text-stone-600 leading-relaxed font-light text-lg">
-                From relaxing mornings with natural light to evenings spent with friends and family, every space was created to deliver comfort, style and memorable moments.
-            </p>
-            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-stone-700 font-medium">
-                <li class="flex items-center gap-2 text-sm">✓ Spacious modern interiors</li>
-                <li class="flex items-center gap-2 text-sm">✓ Fully equipped kitchen</li>
-                <li class="flex items-center gap-2 text-sm">✓ Dedicated workspace</li>
-                <li class="flex items-center gap-2 text-sm">✓ Elegant dining areas</li>
-                <li class="flex items-center gap-2 text-sm sm:col-span-2">✓ Ideal for long stays & vacations</li>
-            </ul>
-        </div>
-        <div class="overflow-hidden rounded-xl shadow-xl order-1 lg:order-2 group">
-            <img src="assets/Living room.avif" alt="Living Room" class="w-full h-[450px] object-cover group-hover:scale-105 transition-transform duration-500">
+    <!-- GALERÍA ULTRA RESPONSIVA -->
+    <section id="gallery" class="seccion-galeria">
+        <h2 class="titulo-seccion">Take a visual tour</h2>
+        <div class="cuadricula-responsiva">
+            <div class="contenedor-foto"><img src="assets/Exterior.avif"></div>
+            <div class="contenedor-foto"><img src="assets/Fly view.avif"></div>
+            <div class="contenedor-foto"><img src="assets/Living room.avif"></div>
+            <div class="contenedor-foto"><img src="assets/Dining area.avif"></div>
+            <div class="contenedor-foto"><img src="assets/Full kitchen.avif"></div>
+            <div class="contenedor-foto"><img src="assets/Workspace.avif"></div>
         </div>
     </section>
 
-    <!-- VISUAL TOUR / GALLERY (CORREGIDA E IMPACTANTE) -->
-    <section id="gallery" class="py-20 bg-stone-100">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="font-serif text-4xl font-bold text-center text-stone-900 mb-12">
-                Take a visual tour
-            </h2>
-            <!-- Reorganizado en una cuadrícula responsiva nativa -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="overflow-hidden rounded-lg shadow-md aspect-[4/3] bg-stone-200 group">
-                    <img src="assets/Exterior.avif" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                </div>
-                <div class="overflow-hidden rounded-lg shadow-md aspect-[4/3] bg-stone-200 group">
-                    <img src="assets/Fly view.avif" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                </div>
-                <div class="overflow-hidden rounded-lg shadow-md aspect-[4/3] bg-stone-200 group">
-                    <img src="assets/Living room.avif" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                </div>
-                <div class="overflow-hidden rounded-lg shadow-md aspect-[4/3] bg-stone-200 group">
-                    <img src="assets/Dining area.avif" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                </div>
-                <div class="overflow-hidden rounded-lg shadow-md aspect-[4/3] bg-stone-200 group">
-                    <img src="assets/Full kitchen.avif" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                </div>
-                <div class="overflow-hidden rounded-lg shadow-md aspect-[4/3] bg-stone-200 group">
-                    <img src="assets/Workspace.avif" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                </div>
-            </div>
-        </div>
+    <!-- CALENDARIO -->
+    <section class="seccion-calendario">
+        <h2 class="titulo-seccion">Availability</h2>
+        <div id="calendar-container"></div>
     </section>
 
-    <!-- BEDROOMS -->
-    <section class="py-20 max-w-6xl mx-auto px-6">
-        <h2 class="font-serif text-4xl font-bold text-center text-stone-900 mb-12">Rest in comfort</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-stone-100 group">
-                <div class="h-48 overflow-hidden"><img src="assets/Bedroom 1.avif" class="w-full h-full object-cover group-hover:scale-105 transition duration-300"></div>
-                <div class="p-4"><h3 class="font-serif text-lg font-semibold text-stone-900">Bedroom One</h3></div>
-            </div>
-            <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-stone-100 group">
-                <div class="h-48 overflow-hidden"><img src="assets/Bedroom 2.avif" class="w-full h-full object-cover group-hover:scale-105 transition duration-300"></div>
-                <div class="p-4"><h3 class="font-serif text-lg font-semibold text-stone-900">Bedroom Two</h3></div>
-            </div>
-            <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-stone-100 group">
-                <div class="h-48 overflow-hidden"><img src="assets/Bedroom 3.avif" class="w-full h-full object-cover group-hover:scale-105 transition duration-300"></div>
-                <div class="p-4"><h3 class="font-serif text-lg font-semibold text-stone-900">Bedroom Three</h3></div>
-            </div>
-            <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-stone-100 group">
-                <div class="h-48 overflow-hidden"><img src="assets/Bedroom 4.avif" class="w-full h-full object-cover group-hover:scale-105 transition duration-300"></div>
-                <div class="p-4"><h3 class="font-serif text-lg font-semibold text-stone-900">Bedroom Four</h3></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- DETALLES ADICIONALES -->
-    <section class="py-20 bg-stone-100">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="font-serif text-4xl font-bold text-center text-stone-900 mb-12">Every detail matters</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="overflow-hidden rounded-lg shadow-md aspect-[4/3] bg-stone-200 group"><img src="assets/Full bathroom 1.avif" class="w-full h-full object-cover group-hover:scale-105 transition duration-300"></div>
-                <div class="overflow-hidden rounded-lg shadow-md aspect-[4/3] bg-stone-200 group"><img src="assets/Full bathroom 2.avif" class="w-full h-full object-cover group-hover:scale-105 transition duration-300"></div>
-                <div class="overflow-hidden rounded-lg shadow-md aspect-[4/3] bg-stone-200 group"><img src="assets/Full bathroom 3.avif" class="w-full h-full object-cover group-hover:scale-105 transition duration-300"></div>
-                <div class="overflow-hidden rounded-lg shadow-md aspect-[4/3] bg-stone-200 group"><img src="assets/Half bathroom.avif" class="w-full h-full object-cover group-hover:scale-105 transition duration-300"></div>
-                <div class="overflow-hidden rounded-lg shadow-md aspect-[4/3] bg-stone-200 group"><img src="assets/Laundry area.avif" class="w-full h-full object-cover group-hover:scale-105 transition duration-300"></div>
-                <div class="overflow-hidden rounded-lg shadow-md aspect-[4/3] bg-stone-200 group"><img src="assets/Full kitchen 2.avif" class="w-full h-full object-cover group-hover:scale-105 transition duration-300"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- REVIEWS -->
-    <section class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="font-serif text-4xl font-bold text-center text-stone-900 mb-12">Guest Reviews</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="p-8 bg-stone-50 rounded-2xl border border-stone-100 shadow-sm flex flex-col justify-between">
-                    <p class="text-stone-600 italic font-light">“Absolutely beautiful property. Super clean, spacious and even better than the photos.”</p>
-                    <h4 class="font-semibold text-stone-900 mt-6">— Sarah</h4>
-                </div>
-                <div class="p-8 bg-stone-50 rounded-2xl border border-stone-100 shadow-sm flex flex-col justify-between">
-                    <p class="text-stone-600 italic font-light">“Perfect for our family trip to Galveston. Stylish, comfortable and amazing location.”</p>
-                    <h4 class="font-semibold text-stone-900 mt-6">— Michael</h4>
-                </div>
-                <div class="p-8 bg-stone-50 rounded-2xl border border-stone-100 shadow-sm flex flex-col justify-between">
-                    <p class="text-stone-600 italic font-light">“One of the best Airbnb stays we’ve had. The home feels luxurious and welcoming.”</p>
-                    <h4 class="font-semibold text-stone-900 mt-6">— Jessica</h4>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CALENDARIO DE DISPONIBILIDAD -->
-    <section class="py-20 bg-stone-50 border-t border-stone-200">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="font-serif text-4xl font-bold text-center text-stone-900 mb-4">Availability</h2>
-            <p class="text-center text-stone-500 mb-8 text-sm">Fechas actualizadas en tiempo real desde plataformas oficiales.</p>
-            <div id="calendar-container" class="bg-white p-4 md:p-8 rounded-2xl shadow-xl border border-stone-200"></div>
-        </div>
-    </section>
-
-    <!-- FINAL CTA -->
-    <section class="py-24 bg-gradient-to-br from-stone-950 to-stone-900 text-white text-center px-6 relative overflow-hidden">
-        <div class="relative z-10 max-w-2xl mx-auto space-y-6">
-            <h2 class="font-serif text-4xl md:text-5xl font-bold tracking-tight">Your perfect Galveston getaway starts here</h2>
-            <p class="text-stone-400 font-light text-lg">Secure your preferred dates before they’re gone.</p>
-            <div class="pt-4">
-                <a href="tel:+12819780398" class="inline-block px-10 py-5 bg-white text-stone-950 font-semibold rounded-sm hover:bg-stone-200 transition tracking-wider text-sm uppercase shadow-lg">
-                    Llamar y Reservar Directo
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FullCalendar scripts -->
     <script src="jsdelivr.net"></script>
     <script src="availability.js"></script>
 </body>
