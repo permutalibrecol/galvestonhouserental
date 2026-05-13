@@ -6,159 +6,263 @@
     
     <!-- SEO OPTIMIZATION -->
     <title>Island Getaway | Luxury Galveston Beach Vacation Rental</title>
-    <meta name="description" content="Book Island Getaway, a premium 4-bedroom beach villa in Galveston, Texas. Near UTMB and Seawall.">
+    <meta name="description" content="Book Island Getaway, a premium 4-bedroom beach villa in Galveston, Texas. Perfect for families, remote workers, and medical professionals. Near UTMB, The Strand, and Seawall. Fully equipped kitchen, EV charger, and luxury spaces.">
+    <meta name="keywords" content="Galveston beach rental, luxury vacation home Texas, Island Getaway Galveston, 4 bedroom villa Galveston, beachfront stay Galveston, UTMB professional housing, Galveston luxury travel guide">
+    <meta name="robots" content="index, follow">
     
+    <meta property="og:title" content="Island Getaway | Luxury Galveston Beach Vacation Rental">
+    <meta property="og:description" content="Experience premium coastal luxury in Galveston. 4BR designer home perfect for families and remote work.">
+    <meta property="og:image" content="assets/Exterior.avif">
+    <meta property="og:type" content="website">
+
+    <!-- PREMIUM TYPOGRAPHY -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
     <style>
+        /* --- RESET & VARIABLES --- */
         :root {
-            --color-primary: #1a2a3a;
-            --color-secondary: #c5a059;
+            --color-primary: #1a2a3a; /* Deep Navy */
+            --color-secondary: #c5a059; /* Gold/Luxury */
             --color-bg: #f9f9f9;
             --color-text: #333;
             --color-white: #ffffff;
             --font-serif: 'Cinzel', serif;
             --font-sans: 'Lato', sans-serif;
+            --spacing-container: 1200px;
             --transition: all 0.3s ease;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: var(--font-sans); color: var(--color-text); background-color: var(--color-bg); line-height: 1.6; }
-        
-        /* --- CORRECCIÓN DE LEGIBILIDAD EN HERO --- */
-        .hero-creative {
-            position: relative;
-            height: 95vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: var(--color-white);
-            /* Overlay más oscuro (0.5) para que el blanco resalte */
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), 
-                        url('assets/Fly view.avif') no-repeat center center/cover;
-        }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-sans); color: var(--color-text); background-color: var(--color-bg); line-height: 1.6; overflow-x: hidden; }
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
+        ul { list-style: none; }
+        img { width: 100%; height: 100%; display: block; object-fit: cover; }
 
-        .hero-inner {
-            max-width: 900px;
-            padding: 0 20px;
-            /* Sombra de texto para legibilidad extrema */
-            text-shadow: 0px 2px 10px rgba(0,0,0,0.5); 
-        }
-
-        .hero-title {
-            font-size: clamp(2.5rem, 6vw, 4rem); /* Tamaño fluido */
-            margin-bottom: 20px;
-            line-height: 1.1;
-            font-family: var(--font-serif);
-        }
-
-        .hero-lead {
-            font-size: 1.3rem;
-            margin-bottom: 40px;
-            font-weight: 400;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* --- GALLERY GRID FIX --- */
-        .gallery-hybrid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            padding: 20px 0;
-        }
-
-        .gallery-card-luxury {
-            position: relative;
-            height: 300px;
-            overflow: hidden;
-            border-radius: 8px;
-        }
-
-        .gallery-card-luxury img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .gallery-card-luxury:hover img {
-            transform: scale(1.05);
-        }
-
-        /* Botones */
-        .btn-luxury-primary {
-            background-color: var(--color-secondary);
-            color: white;
-            padding: 18px 40px;
-            border-radius: 4px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            display: inline-block;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-            text-shadow: none; /* Quitamos sombra al texto del botón */
-        }
-
-        /* Utilidades */
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .section-padding { padding: 80px 0; }
+        /* --- UTILITIES --- */
         .font-serif { font-family: var(--font-serif); }
+        .container { max-width: var(--spacing-container); margin: 0 auto; padding: 0 20px; }
+        .section-padding { padding: 80px 0; }
         .text-center { text-align: center; }
 
-        /* Estilo para el selector de idiomas en la navegación */
+        /* --- HEADER & NAV --- */
         .navbar-luxury {
-            position: fixed;
-            width: 100%;
-            background: white;
-            padding: 15px 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+            background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05); padding: 15px 0;
         }
-        
         .nav-container { display: flex; justify-content: space-between; align-items: center; }
-        .lang-btn { background: none; border: none; cursor: pointer; font-weight: bold; color: #ccc; }
-        .lang-btn.active { color: var(--color-primary); border-bottom: 2px solid var(--color-secondary); }
+        .nav-logo { font-size: 1.8rem; color: var(--color-primary); font-weight: 600; letter-spacing: 2px; }
+        .nav-menu { display: flex; gap: 20px; align-items: center; }
+        .lang-btn { background: none; border: none; cursor: pointer; color: var(--color-primary); opacity: 0.5; font-weight: 700; }
+        .lang-btn.active { opacity: 1; color: var(--color-secondary); }
+
+        /* --- HERO SECTION (MEJORADO PARA LEGIBILIDAD) --- */
+        .hero-creative {
+            position: relative; height: 90vh; min-height: 600px;
+            display: flex; align-items: center; justify-content: center;
+            text-align: center; color: var(--color-white);
+            /* Overlay más fuerte para que el texto resalte sobre la imagen clara */
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url('assets/Fly view.avif') no-repeat center center/cover;
+        }
+        .hero-inner { 
+            max-width: 800px; padding: 0 20px; animation: fadeIn 1s ease; 
+            text-shadow: 0 2px 15px rgba(0,0,0,0.6); /* Sombra para legibilidad */
+        }
+        .hero-tagline { font-size: 1rem; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 20px; color: var(--color-secondary); font-weight: bold; }
+        .hero-title { font-size: clamp(2.2rem, 5vw, 3.8rem); margin-bottom: 20px; line-height: 1.2; }
+        .hero-lead { font-size: 1.2rem; margin-bottom: 40px; font-weight: 300; text-shadow: 0 1px 5px rgba(0,0,0,0.8); }
+
+        .btn-luxury-primary, .btn-luxury-secondary {
+            padding: 15px 35px; border-radius: 2px; text-transform: uppercase;
+            letter-spacing: 2px; font-size: 0.8rem; font-weight: 700; cursor: pointer; display: inline-block;
+        }
+        .btn-luxury-primary { background-color: var(--color-secondary); color: var(--color-white); border: 2px solid var(--color-secondary); text-shadow: none; }
+        .btn-luxury-secondary { background-color: transparent; color: var(--color-white); border: 2px solid var(--color-white); }
+
+        /* --- PILLARS --- */
+        .pillars-luxury { background-color: var(--color-white); padding: 60px 0; border-bottom: 1px solid #eee; }
+        .pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; text-align: center; }
+
+        /* --- GALLERY --- */
+        .gallery-hybrid-container {
+            display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 250px; gap: 15px;
+        }
+        .gallery-card-luxury { position: relative; overflow: hidden; border-radius: 4px; background-color: #ddd; }
+        .gallery-card-luxury.large { grid-column: span 2; grid-row: span 2; }
+        .gallery-card-luxury.wide { grid-column: span 2; }
+        .img-label { position: absolute; bottom: 20px; left: 20px; background: rgba(255,255,255,0.9); padding: 5px 15px; font-family: var(--font-serif); font-size: 0.8rem; color: var(--color-primary); z-index: 10; }
+
+        /* --- GUIDE & CHANNELS --- */
+        .guide-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .guide-card { padding: 40px; border: 1px solid #eee; transition: var(--transition); background: white; }
+        .guide-number { font-family: var(--font-serif); font-size: 3rem; color: #f0f0f0; display: block; margin-bottom: 20px; }
+        
+        .booking-channels-section { background-color: var(--color-primary); color: var(--color-white); }
+        .channels-grid { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .channel-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 30px 50px; text-align: center; min-width: 250px; }
+        .channel-card:hover { background: var(--color-secondary); }
+
+        /* --- FLOATING CTA --- */
+        .cta-flotante { position: fixed; bottom: 20px; right: 20px; background-color: var(--color-secondary); color: white; padding: 15px 25px; border-radius: 50px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); font-weight: bold; z-index: 999; display: flex; align-items: center; gap: 10px; }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 900px) {
+            .gallery-hybrid-container { grid-template-columns: repeat(2, 1fr); }
+            .pillars-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
 
+    <!-- NAVIGATION -->
     <header class="navbar-luxury">
         <div class="container nav-container">
-            <div class="font-serif" style="font-size: 1.5rem; font-weight: bold;">ISLAND GETAWAY</div>
-            <div class="lang-selector">
-                <button id="btn-en" class="lang-btn active" onclick="switchLanguage('en')">EN</button>
-                <span>|</span>
-                <button id="btn-es" class="lang-btn" onclick="switchLanguage('es')">ES</button>
-            </div>
+            <div class="nav-logo font-serif">LCE</div>
+            <nav class="nav-menu">
+                <div class="lang-selector">
+                    <button id="btn-en" class="lang-btn active" onclick="switchLanguage('en')">EN</button>
+                    <span style="opacity: 0.3;">|</span>
+                    <button id="btn-es" class="lang-btn" onclick="switchLanguage('es')">ES</button>
+                </div>
+            </nav>
         </div>
     </header>
 
+    <!-- FLOATING ACTION BUTTON -->
+    <a href="tel:+12819780398" class="cta-flotante">
+        <span class="txt-en">📞 CALL TO BOOK</span>
+        <span class="txt-es" style="display:none;">📞 LLAMAR PARA RESERVAR</span>
+    </a>
+
+    <!-- HERO SECTION -->
     <section class="hero-creative">
         <div class="hero-inner">
-            <p style="letter-spacing: 5px; color: var(--color-secondary); margin-bottom: 10px;">GALVESTON • TEXAS</p>
-            <h1 class="hero-title">
+            <p class="hero-tagline">GALVESTON • TEXAS</p>
+            <h1 class="hero-title font-serif">
                 <span class="txt-en">The Art of Coastal Living</span>
                 <span class="txt-es" style="display:none;">El Arte de Vivir la Costa</span>
             </h1>
             <p class="hero-lead">
-                <span class="txt-en">A sanctuary delivering absolute comfort, sophisticated design, and unforgettable horizon views.</span>
-                <span class="txt-es" style="display:none;">Un santuario que entrega confort absoluto, diseño sofisticado e inolvidables vistas al horizonte.</span>
+                <span class="txt-en">A meticulously curated beach sanctuary delivering absolute comfort and sophisticated design.</span>
+                <span class="txt-es" style="display:none;">Un santuario costero meticulosamente curado que entrega confort absoluto y diseño sofisticado.</span>
             </p>
-            <a href="https://www.airbnb.com.co/rooms/1526992621340915465" target="_blank" class="btn-luxury-primary">
-                <span class="txt-en">Book Your Stay</span>
-                <span class="txt-es" style="display:none;">Reserva tu Estancia</span>
-            </a>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="#gallery" class="btn-luxury-primary">
+                    <span class="txt-en">Explore Estate</span>
+                    <span class="txt-es" style="display:none;">Explorar Propiedad</span>
+                </a>
+                <a href="https://www.airbnb.com.co/rooms/1526992621340915465" target="_blank" class="btn-luxury-secondary">
+                    <span class="txt-en">Reserve on Airbnb</span>
+                    <span class="txt-es" style="display:none;">Reservar en Airbnb</span>
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- ... Resto de secciones (Pillars, Gallery) siguen igual ... -->
+    <!-- PILLARS -->
+    <section class="pillars-luxury">
+        <div class="container pillars-grid">
+            <div class="pillar-card">
+                <h3 class="font-serif">4 Premium Bedrooms</h3>
+                <p class="txt-en">Tailored spaces with EV charging and high-speed Wi-Fi.</p>
+                <p class="txt-es" style="display:none;">Espacios a medida con cargador EV y wifi veloz.</p>
+            </div>
+            <div class="pillar-card">
+                <h3 class="font-serif">Elite Infrastructure</h3>
+                <p class="txt-en">Fully equipped gourmet kitchen and dynamic workstations.</p>
+                <p class="txt-es" style="display:none;">Cocina gourmet equipada y estaciones de trabajo.</p>
+            </div>
+            <div class="pillar-card">
+                <h3 class="font-serif">Curated Hospitality</h3>
+                <p class="txt-en">A pristine retreat hosted by Maribel, a dedicated Superhost.</p>
+                <p class="txt-es" style="display:none;">Un refugio gestionado por Maribel, Superanfitriona.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section-padding">
+        <div class="container">
+            <h2 class="text-center font-serif" style="font-size: 2.5rem; margin-bottom: 40px;">
+                <span class="txt-en">Visual Journey</span>
+                <span class="txt-es" style="display:none;">El Viaje Visual</span>
+            </h2>
+            <div class="gallery-hybrid-container">
+                <div class="gallery-card-luxury large">
+                    <img src="assets/Living room.avif" alt="Living room">
+                    <div class="img-label">The Sanctuary</div>
+                </div>
+                <div class="gallery-card-luxury">
+                    <img src="assets/Exterior.avif" alt="Exterior">
+                    <div class="img-label">The Estate</div>
+                </div>
+                <div class="gallery-card-luxury">
+                    <img src="assets/Fly view.avif" alt="Drone view">
+                    <div class="img-label">The Horizon</div>
+                </div>
+                <div class="gallery-card-luxury">
+                    <img src="assets/Dining area.avif" alt="Dining">
+                    <div class="img-label">Gatherings</div>
+                </div>
+                <div class="gallery-card-luxury">
+                    <img src="assets/Full kitchen.avif" alt="Kitchen">
+                    <div class="img-label">Epicurean</div>
+                </div>
+                <div class="gallery-card-luxury wide">
+                    <img src="assets/Workspace.avif" alt="Workspace">
+                    <div class="img-label">Focus</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE GUIDE -->
+    <section class="section-padding" style="background: white;">
+        <div class="container">
+            <h2 class="text-center font-serif" style="font-size: 2.5rem; margin-bottom: 40px;">Galveston Insider Guide</h2>
+            <div class="guide-grid">
+                <div class="guide-card">
+                    <span class="guide-number">01</span>
+                    <h4 class="font-serif">Historic Strand Strolls</h4>
+                    <p>Experience Victorian architecture and upscale dining minutes away.</p>
+                </div>
+                <div class="guide-card">
+                    <span class="guide-number">02</span>
+                    <h4 class="font-serif">Private Dolphin Cruises</h4>
+                    <p>Request a private charter from Pier 21 for an intimate experience.</p>
+                </div>
+                <div class="guide-card">
+                    <span class="guide-number">03</span>
+                    <h4 class="font-serif">Pro Insider Tip</h4>
+                    <p>Experience the absolute silence of dawn on Seawall Boulevard.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING CHANNELS -->
+    <section class="booking-channels-section section-padding">
+        <div class="container text-center">
+            <h2 class="font-serif" style="font-size: 2.5rem; margin-bottom: 40px;">Select Your Platform</h2>
+            <div class="channels-grid">
+                <a href="https://www.airbnb.com.co/rooms/1526992621340915465" target="_blank" class="channel-card">
+                    <span style="display: block; font-size: 1.5rem; font-family: var(--font-serif);">Airbnb</span>
+                    <span>View Property →</span>
+                </a>
+                <div class="channel-card" style="opacity: 0.5;">
+                    <span style="display: block; font-size: 1.5rem; font-family: var(--font-serif);">VRBO</span>
+                    <span>Coming Soon</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background: #111; color: #666; padding: 40px 0; text-align: center;">
+        <p>&copy; 2026 Island Getaway Galveston. All rights reserved.</p>
+    </footer>
 
     <script>
         function switchLanguage(lang) {
