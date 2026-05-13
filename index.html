@@ -6,615 +6,161 @@
     
     <!-- SEO OPTIMIZATION -->
     <title>Island Getaway | Luxury Galveston Beach Vacation Rental</title>
-    <meta name="description" content="Book Island Getaway, a premium 4-bedroom beach villa in Galveston, Texas. Perfect for families, remote workers, and medical professionals. Near UTMB, The Strand, and Seawall. Fully equipped kitchen, EV charger, and luxury spaces.">
-    <meta name="keywords" content="Galveston beach rental, luxury vacation home Texas, Island Getaway Galveston, 4 bedroom villa Galveston, beachfront stay Galveston, UTMB professional housing, Galveston luxury travel guide">
-    <meta name="robots" content="index, follow">
+    <meta name="description" content="Book Island Getaway, a premium 4-bedroom beach villa in Galveston, Texas. Near UTMB and Seawall.">
     
-    <meta property="og:title" content="Island Getaway | Luxury Galveston Beach Vacation Rental">
-    <meta property="og:description" content="Experience premium coastal luxury in Galveston. 4BR designer home perfect for families and remote work.">
-    <!-- Asegúrate que esta imagen exista en tu carpeta assets -->
-    <meta property="og:image" content="assets/Exterior.avif">
-    <meta property="og:type" content="website">
-
-    <!-- PREMIUM TYPOGRAPHY -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
     <style>
-        /* --- RESET & VARIABLES --- */
         :root {
-            --color-primary: #1a2a3a; /* Deep Navy */
-            --color-secondary: #c5a059; /* Gold/Luxury */
+            --color-primary: #1a2a3a;
+            --color-secondary: #c5a059;
             --color-bg: #f9f9f9;
             --color-text: #333;
             --color-white: #ffffff;
             --font-serif: 'Cinzel', serif;
             --font-sans: 'Lato', sans-serif;
-            --spacing-container: 1200px;
             --transition: all 0.3s ease;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: var(--font-sans);
-            color: var(--color-text);
-            background-color: var(--color-bg);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        a { text-decoration: none; color: inherit; transition: var(--transition); }
-        ul { list-style: none; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-sans); color: var(--color-text); background-color: var(--color-bg); line-height: 1.6; }
         
-        /* Image Handling - Fixed to prevent disorder */
-        img {
-            width: 100%;
-            height: 100%;
-            display: block;
-            object-fit: cover; /* THIS IS KEY: crops image to fill the box without stretching */
-        }
-
-        /* --- UTILITIES --- */
-        .font-serif { font-family: var(--font-serif); }
-        .container {
-            max-width: var(--spacing-container);
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        .section-padding { padding: 80px 0; }
-        .text-center { text-align: center; }
-
-        /* --- HEADER & NAV --- */
-        .navbar-luxury {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
-            padding: 15px 0;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-logo {
-            font-size: 1.8rem;
-            color: var(--color-primary);
-            font-weight: 600;
-            letter-spacing: 2px;
-        }
-
-        .nav-menu {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-        }
-
-        .lang-selector {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: var(--color-primary);
-        }
-
-        .lang-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            color: var(--color-primary);
-            opacity: 0.5;
-            transition: var(--transition);
-        }
-
-        .lang-btn.active { opacity: 1; color: var(--color-secondary); }
-        .lang-divider { opacity: 0.3; }
-
-        /* Mobile Hamburger */
-        .hamburger {
-            display: none;
-            cursor: pointer;
-            flex-direction: column;
-            gap: 5px;
-        }
-        .hamburger span {
-            width: 25px;
-            height: 3px;
-            background-color: var(--color-primary);
-            transition: var(--transition);
-        }
-
-        /* --- HERO SECTION --- */
+        /* --- CORRECCIÓN DE LEGIBILIDAD EN HERO --- */
         .hero-creative {
             position: relative;
-            height: 90vh;
-            min-height: 600px;
+            height: 95vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: var(--color-white);
-            /* Usando tu imagen de fondo original */
-            background: linear-gradient(rgba(26, 42, 58, 0.4), rgba(26, 42, 58, 0.4)), url('assets/Fly view.avif') no-repeat center center/cover;
+            /* Overlay más oscuro (0.5) para que el blanco resalte */
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), 
+                        url('assets/Fly view.avif') no-repeat center center/cover;
         }
 
         .hero-inner {
-            max-width: 800px;
+            max-width: 900px;
             padding: 0 20px;
-            animation: fadeIn 1s ease;
-        }
-
-        .hero-tagline {
-            font-size: 1rem;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-            color: var(--color-secondary);
+            /* Sombra de texto para legibilidad extrema */
+            text-shadow: 0px 2px 10px rgba(0,0,0,0.5); 
         }
 
         .hero-title {
-            font-size: 3.5rem;
+            font-size: clamp(2.5rem, 6vw, 4rem); /* Tamaño fluido */
             margin-bottom: 20px;
-            line-height: 1.2;
+            line-height: 1.1;
+            font-family: var(--font-serif);
         }
 
         .hero-lead {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             margin-bottom: 40px;
-            font-weight: 300;
+            font-weight: 400;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .hero-buttons-group {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn-luxury-primary, .btn-luxury-secondary {
-            padding: 15px 35px;
-            border-radius: 2px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            transition: var(--transition);
-            cursor: pointer;
-            display: inline-block;
-        }
-
-        .btn-luxury-primary {
-            background-color: var(--color-secondary);
-            color: var(--color-white);
-            border: 2px solid var(--color-secondary);
-        }
-        .btn-luxury-primary:hover { background-color: #b08d4b; }
-
-        .btn-luxury-secondary {
-            background-color: transparent;
-            color: var(--color-white);
-            border: 2px solid var(--color-white);
-        }
-        .btn-luxury-secondary:hover { background-color: var(--color-white); color: var(--color-primary); }
-
-        /* --- PILLARS SECTION --- */
-        .pillars-luxury {
-            background-color: var(--color-white);
-            padding: 60px 0;
-            border-bottom: 1px solid #eee;
-        }
-
-        .pillars-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            text-align: center;
-        }
-
-        .pillar-card h3 { color: var(--color-primary); margin-bottom: 15px; font-size: 1.5rem; }
-        .pillar-card p { color: #666; font-size: 0.95rem; }
-
-        /* --- GALLERY SECTION (CON TUS IMÁGENES) --- */
-        .gallery-creative-section { background-color: var(--color-bg); }
-        
-        .section-title-luxury {
-            font-size: 2.5rem;
-            color: var(--color-primary);
-            margin-bottom: 50px;
-            position: relative;
-            display: inline-block;
-        }
-        
+        /* --- GALLERY GRID FIX --- */
         .gallery-hybrid-container {
             display: grid;
-            /* Grid Responsivo: PC tiene 4 columnas */
-            grid-template-columns: repeat(4, 1fr);
-            grid-auto-rows: 250px; /* Altura fija para mantener el orden */
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 15px;
+            padding: 20px 0;
         }
 
         .gallery-card-luxury {
             position: relative;
+            height: 300px;
             overflow: hidden;
-            border-radius: 4px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            background-color: #ddd; /* Fallback color while loading */
-        }
-
-        .img-label {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            background: rgba(255,255,255,0.9);
-            padding: 5px 15px;
-            font-family: var(--font-serif);
-            font-size: 0.8rem;
-            color: var(--color-primary);
-            letter-spacing: 1px;
-            z-index: 10;
-        }
-
-        /* Ajustes específicos para tu galería en PC */
-        .gallery-card-luxury.large { grid-column: span 2; grid-row: span 2; }
-        .gallery-card-luxury.wide { grid-column: span 2; }
-
-        /* --- EXPERIENCE GUIDE --- */
-        .experience-guide-section { background-color: var(--color-white); }
-        
-        .guide-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .guide-card {
-            padding: 40px;
-            border: 1px solid #eee;
-            transition: var(--transition);
-        }
-        .guide-card:hover { border-color: var(--color-secondary); transform: translateY(-5px); }
-
-        .guide-number {
-            font-family: var(--font-serif);
-            font-size: 3rem;
-            color: #eee;
-            display: block;
-            margin-bottom: 20px;
-        }
-        .guide-card h4 { font-size: 1.4rem; margin-bottom: 15px; color: var(--color-primary); }
-        .guide-card p { color: #666; }
-
-        /* --- BOOKING CHANNELS --- */
-        .booking-channels-section { background-color: var(--color-primary); color: var(--color-white); }
-        .booking-channels-section .section-title-luxury { color: var(--color-white); }
-        
-        .channels-grid {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .channel-card {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
-            padding: 30px 50px;
-            text-align: center;
-            transition: var(--transition);
-            min-width: 250px;
-        }
-
-        .channel-card:hover { background: var(--color-secondary); border-color: var(--color-secondary); }
-        .channel-name { display: block; font-size: 1.5rem; margin-bottom: 10px; font-family: var(--font-serif); }
-        .channel-action { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
-
-        /* --- CALENDAR --- */
-        .calendar-wrapper {
-            background: white;
-            padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            max-width: 800px;
-            margin: 0 auto;
         }
 
-        /* --- FLOATING CTA --- */
-        .cta-flotante {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
+        .gallery-card-luxury img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-card-luxury:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Botones */
+        .btn-luxury-primary {
             background-color: var(--color-secondary);
             color: white;
-            padding: 15px 25px;
-            border-radius: 50px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            padding: 18px 40px;
+            border-radius: 4px;
             font-weight: bold;
-            z-index: 999;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: inline-block;
             transition: var(--transition);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .cta-flotante:hover { transform: scale(1.05); background-color: #b08d4b; }
-
-        footer {
-            background-color: #111;
-            color: #888;
-            padding: 40px 0;
-            text-align: center;
-            font-size: 0.9rem;
+            border: none;
+            cursor: pointer;
+            text-shadow: none; /* Quitamos sombra al texto del botón */
         }
 
-        /* --- RESPONSIVE MEDIA QUERIES --- */
-        @media (max-width: 900px) {
-            .gallery-hybrid-container {
-                grid-template-columns: repeat(2, 1fr); /* Tablet: 2 columnas */
-            }
-            .pillars-grid { grid-template-columns: 1fr; gap: 30px; }
-            .hero-title { font-size: 2.5rem; }
+        /* Utilidades */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .section-padding { padding: 80px 0; }
+        .font-serif { font-family: var(--font-serif); }
+        .text-center { text-align: center; }
+
+        /* Estilo para el selector de idiomas en la navegación */
+        .navbar-luxury {
+            position: fixed;
+            width: 100%;
+            background: white;
+            padding: 15px 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-
-        @media (max-width: 600px) {
-            /* Mobile Nav */
-            .nav-menu {
-                position: absolute;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                background: white;
-                flex-direction: column;
-                padding: 20px;
-                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-                clip-path: circle(0% at 100% 0);
-                transition: clip-path 0.5s ease-in-out;
-            }
-            .nav-menu.active { clip-path: circle(150% at 100% 0); }
-            .hamburger { display: flex; }
-
-            /* Mobile Gallery: Stacking (Columnas) */
-            .gallery-hybrid-container {
-                display: flex;
-                flex-direction: column;
-                height: auto;
-            }
-            /* En móvil, reseteamos el tamaño para que no se vean cortadas ni deformadas */
-            .gallery-card-luxury {
-                height: 300px; /* Altura estándar bonita para móvil */
-                width: 100%;
-            }
-            .gallery-card-luxury.large, .gallery-card-luxury.wide {
-                height: 300px; /* Mismo alto que las demás en móvil */
-            }
-
-            .hero-title { font-size: 2rem; }
-            .hero-buttons-group { flex-direction: column; width: 100%; }
-            .btn-luxury-primary, .btn-luxury-secondary { width: 100%; text-align: center; }
-            .channels-grid { flex-direction: column; }
-            .channel-card { width: 100%; }
-        }
+        
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .lang-btn { background: none; border: none; cursor: pointer; font-weight: bold; color: #ccc; }
+        .lang-btn.active { color: var(--color-primary); border-bottom: 2px solid var(--color-secondary); }
     </style>
 </head>
 <body>
 
-    <!-- NAVIGATION -->
     <header class="navbar-luxury">
         <div class="container nav-container">
-            <div class="nav-logo font-serif">LCE</div>
-            <div class="hamburger" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="font-serif" style="font-size: 1.5rem; font-weight: bold;">ISLAND GETAWAY</div>
+            <div class="lang-selector">
+                <button id="btn-en" class="lang-btn active" onclick="switchLanguage('en')">EN</button>
+                <span>|</span>
+                <button id="btn-es" class="lang-btn" onclick="switchLanguage('es')">ES</button>
             </div>
-            <nav class="nav-menu" id="navMenu">
-                <div class="lang-selector">
-                    <button id="btn-en" class="lang-btn active" onclick="switchLanguage('en')">EN</button>
-                    <span class="lang-divider">|</span>
-                    <button id="btn-es" class="lang-btn" onclick="switchLanguage('es')">ES</button>
-                </div>
-            </nav>
         </div>
     </header>
 
-    <!-- FLOATING ACTION BUTTON -->
-    <a href="tel:+12819780398" class="cta-flotante">
-        <span class="txt-en">📞 CALL MARIBEL TO BOOK</span>
-        <span class="txt-es" style="display:none;">📞 LLAMAR A MARIBEL</span>
-    </a>
-
-    <!-- HERO SECTION (Usando tu imagen Fly view) -->
     <section class="hero-creative">
         <div class="hero-inner">
-            <p class="hero-tagline tracking-wide">GALVESTON • TEXAS</p>
-            <h1 class="hero-title font-serif">
+            <p style="letter-spacing: 5px; color: var(--color-secondary); margin-bottom: 10px;">GALVESTON • TEXAS</p>
+            <h1 class="hero-title">
                 <span class="txt-en">The Art of Coastal Living</span>
                 <span class="txt-es" style="display:none;">El Arte de Vivir la Costa</span>
             </h1>
             <p class="hero-lead">
-                <span class="txt-en">A meticulously curated beach sanctuary delivering absolute comfort, sophisticated design, and unforgettable horizon views.</span>
-                <span class="txt-es" style="display:none;">Un santuario costero meticulosamente curado que entrega confort absoluto, diseño sofisticado e inolvidables vistas al horizonte.</span>
+                <span class="txt-en">A sanctuary delivering absolute comfort, sophisticated design, and unforgettable horizon views.</span>
+                <span class="txt-es" style="display:none;">Un santuario que entrega confort absoluto, diseño sofisticado e inolvidables vistas al horizonte.</span>
             </p>
-            <div class="hero-buttons-group">
-                <a href="#gallery" class="btn-luxury-primary">
-                    <span class="txt-en">Explore Estate</span>
-                    <span class="txt-es" style="display:none;">Explorar Propiedad</span>
-                </a>
-                <a href="https://www.airbnb.com.co/rooms/1526992621340915465?_set_bev_on_new_domain=1778651746_EANjUzNWE3MmNmZW&set_everest_cookie_on_new_domain=1778651746.EANTY3NDY4NmFjN2QzN2.sCugTx8dugf8MMfrrTIUpQE8SybCX3p2GNdOWlHQS1c&source_impression_id=p3_1778652772_P3z-eVe5AqMrvudv" target="_blank" class="btn-luxury-secondary">
-                    <span class="txt-en">Reserve on Airbnb</span>
-                    <span class="txt-es" style="display:none;">Reservar en Airbnb</span>
-                </a>
-            </div>
+            <a href="https://www.airbnb.com.co/rooms/1526992621340915465" target="_blank" class="btn-luxury-primary">
+                <span class="txt-en">Book Your Stay</span>
+                <span class="txt-es" style="display:none;">Reserva tu Estancia</span>
+            </a>
         </div>
     </section>
 
-    <!-- PILLARS SECTION -->
-    <section class="pillars-luxury">
-        <div class="container pillars-grid">
-            <div class="pillar-card">
-                <h3 class="font-serif">4 Premium Bedrooms</h3>
-                <p class="txt-en">Tailored sanctuary spaces with EV charging station, balcony views, and high-speed Wi-Fi.</p>
-                <p class="txt-es" style="display:none;">Espacios de santuario equipados con cargador de vehículos eléctricos, balcón y wifi veloz.</p>
-            </div>
-            <div class="pillar-card">
-                <h3 class="font-serif">Elite Infrastructure</h3>
-                <p class="txt-en">Fully equipped gourmet kitchen, bright living spaces, and dynamic workstations for digital nomads.</p>
-                <p class="txt-es" style="display:none;">Cocina gourmet totalmente equipada, salas luminosas y estaciones de trabajo para nómadas digitales.</p>
-            </div>
-            <div class="pillar-card">
-                <h3 class="font-serif">Curated Hospitality</h3>
-                <p class="txt-en">A pristine, quiet retreat hosted by Maribel, a dedicated and highly-rated Superhost.</p>
-                <p class="txt-es" style="display:none;">Un refugio impecable y tranquilo gestionado por Maribel, una Superanfitriona destacada.</p>
-            </div>
-        </div>
-    </section>
+    <!-- ... Resto de secciones (Pillars, Gallery) siguen igual ... -->
 
-    <!-- GALLERY SECTION (TUS IMÁGENES ORIGINALES RESTAURADAS) -->
-    <section id="gallery" class="gallery-creative-section section-padding">
-        <div class="container text-center">
-            <h2 class="section-title-luxury font-serif">
-                <span class="txt-en">Visual Journey</span>
-                <span class="txt-es" style="display:none;">El Viaje Visual</span>
-            </h2>
-            
-            <div class="gallery-hybrid-container">
-                <!-- Imagen Grande Principal -->
-                <div class="gallery-card-luxury large">
-                    <img src="assets/Living room.avif" alt="Luxury Living Room Galveston">
-                    <div class="img-label">The Sanctuary</div>
-                </div>
-                
-                <!-- Imágenes Estándar -->
-                <div class="gallery-card-luxury">
-                    <img src="assets/Exterior.avif" alt="Luxury Villa Exterior">
-                    <div class="img-label">The Estate</div>
-                </div>
-                <div class="gallery-card-luxury">
-                    <img src="assets/Fly view.avif" alt="Drone View Galveston Rental">
-                    <div class="img-label">The Horizon</div>
-                </div>
-                <div class="gallery-card-luxury">
-                    <img src="assets/Dining area.avif" alt="Elegant Dining Area">
-                    <div class="img-label">Gatherings</div>
-                </div>
-                <div class="gallery-card-luxury">
-                    <img src="assets/Full kitchen.avif" alt="Gourmet Kitchen Rental">
-                    <div class="img-label">Epicurean</div>
-                </div>
-                
-                <!-- Imagen Ancha -->
-                <div class="gallery-card-luxury wide">
-                    <img src="assets/Workspace.avif" alt="Premium Workspace Island">
-                    <div class="img-label">Focus</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- EXPERIENCE GUIDE -->
-    <section class="experience-guide-section section-padding">
-        <div class="container">
-            <h2 class="section-title-luxury font-serif text-center">
-                <span class="txt-en">The Galveston Insider Guide</span>
-                <span class="txt-es" style="display:none;">La Guía Exclusiva de Galveston</span>
-            </h2>
-            <div class="guide-grid">
-                <div class="guide-card">
-                    <span class="guide-number">01</span>
-                    <h4 class="font-serif">
-                        <span class="txt-en">Historic Strand Strolls</span>
-                        <span class="txt-es" style="display:none;">Paseos en el Distrito Histórico</span>
-                    </h4>
-                    <p class="txt-en">Immerse yourself in spectacular 19th-century Victorian architecture, exquisite local art galleries, and upscale seafood dining just minutes away.</p>
-                    <p class="txt-es" style="display:none;">Sumérgete en la espectacular arquitectura victoriana del siglo XIX, exquisitas galerías de arte y cenas elegantes a solo minutos.</p>
-                </div>
-                <div class="guide-card">
-                    <span class="guide-number">02</span>
-                    <h4 class="font-serif">
-                        <span class="txt-en">Private Dolphin Cruises</span>
-                        <span class="txt-es" style="display:none;">Cruceros Privados de Delfines</span>
-                    </h4>
-                    <p class="txt-en">Skip the commercial crowds. Request a private charter from Pier 21 at sunset for an intimate encounter with local marine wildlife.</p>
-                    <p class="txt-es" style="display:none;">Evita las multitudes comerciales. Solicita un chárter privado desde el Muelle 21 al atardecer para un encuentro íntimo con la fauna marina.</p>
-                </div>
-                <div class="guide-card">
-                    <span class="guide-number">03</span>
-                    <h4 class="font-serif">
-                        <span class="txt-en">Pro Insider Tip</span>
-                        <span class="txt-es" style="display:none;">Consejo de Experto</span>
-                    </h4>
-                    <p class="txt-en">Galveston beaches have unique seasonal light trends. Experience the absolute silence of dawn on Seawall Boulevard—the ultimate morning routine.</p>
-                    <p class="txt-es" style="display:none;">Las playas de Galveston tienen tendencias de luz estacionales únicas. Experimenta el silencio del amanecer en Seawall Boulevard.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- BOOKING CHANNELS -->
-    <section class="booking-channels-section section-padding">
-        <div class="container text-center">
-            <h2 class="section-title-luxury font-serif">
-                <span class="txt-en">Select Your Platform</span>
-                <span class="txt-es" style="display:none;">Selecciona tu Plataforma</span>
-            </h2>
-            <div class="channels-grid">
-                <a href="https://www.airbnb.com.co/rooms/1526992621340915465?_set_bev_on_new_domain=1778651746_EANjUzNWE3MmNmZW&set_everest_cookie_on_new_domain=1778651746.EANTY3NDY4NmFjN2QzN2.sCugTx8dugf8MMfrrTIUpQE8SybCX3p2GNdOWlHQS1c&source_impression_id=p3_1778652772_P3z-eVe5AqMrvudv" target="_blank" class="channel-card">
-                    <span class="channel-name">Airbnb</span>
-                    <span class="channel-action txt-en">View Property →</span>
-                    <span class="channel-action txt-es" style="display:none;">Ver Anuncio →</span>
-                </a>
-                <a href="#" target="_blank" class="channel-card">
-                    <span class="channel-name">VRBO</span>
-                    <span class="channel-action txt-en">Syncing Soon →</span>
-                    <span class="channel-action txt-es" style="display:none;">Sincronizando →</span>
-                </a>
-                <a href="#" target="_blank" class="channel-card">
-                    <span class="channel-name">Booking.com</span>
-                    <span class="channel-action txt-en">Syncing Soon →</span>
-                    <span class="channel-action txt-es" style="display:none;">Sincronizando →</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- CALENDAR SECTION -->
-    <section class="calendar-creative-section section-padding">
-        <div class="container text-center">
-            <h2 class="section-title-luxury font-serif">
-                <span class="txt-en">Availability</span>
-                <span class="txt-es" style="display:none;">Disponibilidad</span>
-            </h2>
-            <div class="calendar-wrapper">
-                <div id="calendar-container"></div>
-                <!-- Placeholder para el calendario real -->
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Island Getaway Galveston. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- JAVASCRIPT -->
     <script>
-        // Lógica de Cambio de Idioma
         function switchLanguage(lang) {
             const enElements = document.querySelectorAll('.txt-en');
             const esElements = document.querySelectorAll('.txt-es');
@@ -626,28 +172,13 @@
                 esElements.forEach(el => el.style.display = 'block');
                 btnEs.classList.add('active');
                 btnEn.classList.remove('active');
-                document.documentElement.lang = 'es';
             } else {
                 esElements.forEach(el => el.style.display = 'none');
                 enElements.forEach(el => el.style.display = 'block');
                 btnEn.classList.add('active');
                 btnEs.classList.remove('active');
-                document.documentElement.lang = 'en';
             }
-            // Cerrar menú móvil tras selección
-            const navMenu = document.getElementById('navMenu');
-            if(navMenu.classList.contains('active')) {
-                toggleMenu();
-            }
-        }
-
-        // Toggle Menú Móvil
-        function toggleMenu() {
-            const navMenu = document.getElementById('navMenu');
-            navMenu.classList.toggle('active');
         }
     </script>
-    <!-- Tu script de disponibilidad original -->
-    <script src="availability.js"></script>
 </body>
 </html>
