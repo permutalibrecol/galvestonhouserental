@@ -1,4 +1,4 @@
-/* CONFIGURACIÓN GENERAL */
+/* DISEÑO EDITORIAL DE ALTO IMPACTO */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,180 +6,285 @@
 }
 html {
     scroll-behavior: smooth;
-}
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #f5f5f4;
-    color: #292524;
-    padding-bottom: 60px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fcfbfa;
+    color: #1a1816;
 }
 
-/* BOTÓN FLOTANTE MÓVIL RESTRINGIDO */
-.btn-llamada-fijo {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #1e3a8a;
+/* NAVBAR Y SELECTOR DE IDIOMA */
+.navbar-luxury {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 4%;
+    z-index: 100;
+}
+.nav-logo {
     color: #ffffff;
-    padding: 14px 24px;
-    border-radius: 50px;
-    font-weight: 600;
-    text-decoration: none;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-    z-index: 9999;
-    font-size: 14px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    transition: transform 0.2s ease;
+    font-size: 24px;
+    letter-spacing: 3px;
+    font-family: 'Bodoni Moda', serif;
 }
-.btn-llamada-fijo:hover {
-    transform: translateY(-3px);
-    background-color: #1d4ed8;
-}
-
-/* SECCIÓN PORTADA (HERO) */
-.hero-luxury {
-    position: relative;
-    height: 85vh;
+.lang-selector {
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: #1c1917;
-    text-align: center;
-    color: #ffffff;
-    padding: 0 20px;
+    gap: 8px;
+    background: rgba(0,0,0,0.2);
+    padding: 6px 16px;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
 }
-.hero-overlay {
+.lang-btn {
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.6);
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.lang-btn.active, .lang-btn:hover {
+    color: #ffffff;
+    font-weight: 600;
+}
+.lang-divider {
+    color: rgba(255,255,255,0.3);
+    font-size: 12px;
+}
+
+/* BOTÓN ACCIÓN FIJO */
+.cta-flotante {
+    position: fixed;
+    bottom: 30px;
+    right: 4%;
+    background-color: #121110;
+    color: #ffffff;
+    padding: 18px 32px;
+    border-radius: 2px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-decoration: none;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    z-index: 999;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.3s ease;
+}
+.cta-flotante:hover {
+    background-color: #ffffff;
+    color: #121110;
+    transform: translateY(-4px);
+}
+
+/* HERO ASIMÉTRICO CREATIVO */
+.hero-creative {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 6%;
+    background-color: #121110;
+    overflow: hidden;
+}
+.hero-bg-blur {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, #1c1917, transparent);
-    opacity: 0.7;
+    background-image: url('assets/Exterior.avif');
+    background-size: cover;
+    background-center: center;
+    opacity: 0.35;
+    filter: grayscale(20%);
 }
-.hero-container {
+.hero-inner {
     position: relative;
-    z-index: 2;
-    max-width: 800px;
+    z-index: 5;
+    max-width: 850px;
 }
-.hero-subtitulo {
-    letter-spacing: 0.25em;
-    font-size: 12px;
+.hero-tagline {
+    color: #c5a880;
+    font-size: 11px;
     font-weight: 600;
-    color: #d6d3d1;
-    margin-bottom: 15px;
-}
-.hero-titulo {
-    font-family: 'Playfair Display', serif;
-    font-size: 42px;
-    line-height: 1.1;
+    letter-spacing: 5px;
     margin-bottom: 20px;
 }
-.hero-texto {
-    font-size: 16px;
-    color: #e7e5e4;
-    margin-bottom: 35px;
+.hero-title {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 48px;
+    color: #ffffff;
+    line-height: 1.1;
     font-weight: 300;
-    line-height: 1.6;
+    margin-bottom: 25px;
 }
-.hero-acciones {
+.hero-lead {
+    font-size: 16px;
+    color: #dcd9d6;
+    line-height: 1.7;
+    font-weight: 300;
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+.hero-buttons-group {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
-.btn-principal, .btn-secundario {
-    display: inline-block;
-    padding: 15px 30px;
-    font-size: 13px;
+.btn-luxury-primary, .btn-luxury-secondary {
+    padding: 18px 36px;
+    font-size: 11px;
     font-weight: 600;
+    letter-spacing: 2px;
     text-transform: uppercase;
     text-decoration: none;
-    letter-spacing: 0.1em;
-    border-radius: 2px;
-    transition: all 0.2s;
+    text-align: center;
+    transition: all 0.3s;
 }
-.btn-principal {
-    background-color: #ffffff;
-    color: #1c1917;
+.btn-luxury-primary {
+    background-color: #c5a880;
+    color: #121110;
 }
-.btn-secundario {
-    background-color: transparent;
+.btn-luxury-primary:hover { background-color: #ffffff; }
+.btn-luxury-secondary {
+    border: 1px solid rgba(255,255,255,0.3);
     color: #ffffff;
-    border: 1px solid #ffffff;
+}
+.btn-luxury-secondary:hover { background-color: rgba(255,255,255,0.1); }
+
+/* PILARES EDITORIALES */
+.pillars-luxury {
+    background-color: #1a1816;
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 60px 4%;
+    gap: 40px;
+}
+.pillar-card h3 {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #c5a880;
+    margin-bottom: 12px;
+}
+.pillar-card p {
+    font-size: 14px;
+    color: #b5b0aa;
+    line-height: 1.6;
+    font-weight: 300;
 }
 
-/* BARRA DE MÉTRICAS */
-.metricas-barra {
-    background-color: #1c1917;
-    color: #ffffff;
-    padding: 40px 20px;
+/* CUADRICULA EDITORIAL ASIMÉTRICA DE GALERÍA */
+.gallery-creative-section, .booking-channels-section, .calendar-creative-section {
+    padding: 100px 4%;
+}
+.section-title-luxury {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 36px;
+    font-weight: 300;
     text-align: center;
+    margin-bottom: 60px;
+    letter-spacing: 1px;
 }
-.metrica-item {
-    margin-bottom: 30px;
+.editorial-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
 }
-.metrica-item h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 26px;
-    margin-bottom: 5px;
+.editorial-item {
+    position: relative;
+    background-color: #eae7e4;
+    overflow: hidden;
+    aspect-ratio: 4/3;
 }
-.metrica-item p {
-    font-size: 13px;
-    color: #a8a29e;
+.editorial-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.editorial-item:hover img {
+    transform: scale(1.04);
+}
+.img-label {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #ffffff;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: rgba(0,0,0,0.4);
+    padding: 4px 12px;
 }
 
-/* SECCIONES Y CUADRICULA MULTIPLATAFORMA (MOBILE RESPONSIVE) */
-.seccion-galeria, .seccion-calendario {
-    padding: 60px 20px;
-    max-width: 1100px;
-    margin: 0 auto;
+/* MULTIPLATAFORMA DE CANALES */
+.booking-channels-section {
+    background-color: #f4f2ef;
 }
-.titulo-seccion {
-    font-family: 'Playfair Display', serif;
-    font-size: 32px;
-    text-align: center;
+.channels-intro {
+    font-size: 15px;
+    color: #65605b;
     margin-bottom: 40px;
+    font-weight: 300;
 }
-.cuadricula-responsiva {
+.channels-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
-.contenedor-foto {
-    background-color: #e7e5e4;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    aspect-ratio: 4 / 3;
-}
-.contenedor-foto img {
-    width: 100%;
-    height: 100%;
-    object-cover: cover;
-    display: block;
-}
-#calendar-container {
+.channel-card {
     background: #ffffff;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    padding: 30px;
+    border: 1px solid #e2deda;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: #1a1816;
+    transition: all 0.3s;
+}
+.channel-card:hover {
+    border-color: #c5a880;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+.channel-name {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 22px;
+}
+.channel-action {
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #c5a880;
+    font-weight: 600;
 }
 
-/* REGLAS ESPECÍFICAS PARA COMPUTADORAS (PANTALLAS GRANDES) */
+/* CALENDARIO CONTENEDOR */
+.calendar-wrapper {
+    max-w: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.03);
+}
+
+/* RESPONSIVE DESIGN (TABLETS Y COMPUTADORAS) */
 @media (min-width: 768px) {
-    .hero-titulo { font-size: 68px; }
-    .hero-texto { font-size: 18px; }
-    .hero-acciones { flex-direction: row; justify-content: center; }
+    .hero-title { font-size: 76px; }
+    .hero-buttons-group { flex-direction: row; }
+    .pillars-luxury { grid-template-columns: repeat(3, 1fr); padding: 80px 6%; }
+    .border-x-luxury { border-left: 1px solid rgba(255,255,255,0.1); border-right: 1px solid rgba(255,255,255,0.1); padding: 0 30px; }
     
-    .metricas-barra {
-        display: flex;
-        justify-content: space-around;
-        padding: 50px 40px;
-    }
-    .metrica-item { margin-bottom: 0; max-width: 300px; }
-    .divisor { border-x: 1px solid #44403c; padding: 0 40px; }
+    /* Configuración de cuadrícula asimétrica estilo revista */
+    .editorial-grid { grid-template-columns: repeat(3, 1fr); gap: 40px; }
+    .large-panel { grid-column: span 2; grid-row: span 2; aspect-ratio: 16/10; }
+    .spatial-panel { grid-column: span 2; aspect-ratio: 21/9; }
     
-    .cuadricula-responsiva {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 25px;
-    }
-    .seccion-galeria, .seccion-calendario { padding: 80px 40px; }
+    .channels-grid { grid-template-columns: repeat(3, 1fr); }
+    .channel-card { flex-direction: column; align-items: flex-start; gap: 40px; }
 }
