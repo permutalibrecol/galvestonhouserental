@@ -1,75 +1,185 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luxury Coastal Escape | Galveston Beach Stay</title>
-    <meta name="description" content="Luxury coastal vacation rental in Galveston, Texas. Spacious interiors, elegant design, premium comfort and unforgettable beach getaway experience.">
+/* CONFIGURACIÓN GENERAL */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f5f4;
+    color: #292524;
+    padding-bottom: 60px;
+}
+
+/* BOTÓN FLOTANTE MÓVIL RESTRINGIDO */
+.btn-llamada-fijo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1e3a8a;
+    color: #ffffff;
+    padding: 14px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    z-index: 9999;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: transform 0.2s ease;
+}
+.btn-llamada-fijo:hover {
+    transform: translateY(-3px);
+    background-color: #1d4ed8;
+}
+
+/* SECCIÓN PORTADA (HERO) */
+.hero-luxury {
+    position: relative;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1c1917;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 20px;
+}
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, #1c1917, transparent);
+    opacity: 0.7;
+}
+.hero-container {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+.hero-subtitulo {
+    letter-spacing: 0.25em;
+    font-size: 12px;
+    font-weight: 600;
+    color: #d6d3d1;
+    margin-bottom: 15px;
+}
+.hero-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+.hero-texto {
+    font-size: 16px;
+    color: #e7e5e4;
+    margin-bottom: 35px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+.hero-acciones {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.btn-principal, .btn-secundario {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    border-radius: 2px;
+    transition: all 0.2s;
+}
+.btn-principal {
+    background-color: #ffffff;
+    color: #1c1917;
+}
+.btn-secundario {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+/* BARRA DE MÉTRICAS */
+.metricas-barra {
+    background-color: #1c1917;
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+}
+.metrica-item {
+    margin-bottom: 30px;
+}
+.metrica-item h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+.metrica-item p {
+    font-size: 13px;
+    color: #a8a29e;
+}
+
+/* SECCIONES Y CUADRICULA MULTIPLATAFORMA (MOBILE RESPONSIVE) */
+.seccion-galeria, .seccion-calendario {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.titulo-seccion {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.cuadricula-responsiva {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+.contenedor-foto {
+    background-color: #e7e5e4;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    aspect-ratio: 4 / 3;
+}
+.contenedor-foto img {
+    width: 100%;
+    height: 100%;
+    object-cover: cover;
+    display: block;
+}
+#calendar-container {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* REGLAS ESPECÍFICAS PARA COMPUTADORAS (PANTALLAS GRANDES) */
+@media (min-width: 768px) {
+    .hero-titulo { font-size: 68px; }
+    .hero-texto { font-size: 18px; }
+    .hero-acciones { flex-direction: row; justify-content: center; }
     
-    <link rel="preconnect" href="googleapis.com">
-    <link rel="preconnect" href="gstatic.com" crossorigin>
-    <link href="googleapis.com" rel="stylesheet">
+    .metricas-barra {
+        display: flex;
+        justify-content: space-around;
+        padding: 50px 40px;
+    }
+    .metrica-item { margin-bottom: 0; max-width: 300px; }
+    .divisor { border-x: 1px solid #44403c; padding: 0 40px; }
     
-    <link rel="stylesheet" href="style.css">
-    <link href="jsdelivr.net" rel="stylesheet">
-</head>
-<body>
-
-    <!-- BOTÓN DE LLAMADA DIRECTA FIJO -->
-    <a href="tel:+12819780398" class="btn-llamada-fijo">
-        📞 Llamar a Maribel
-    </a>
-
-    <!-- HERO / PORTADA SECCIÓN -->
-    <section class="hero-luxury">
-        <div class="hero-overlay"></div>
-        <div class="hero-container">
-            <p class="hero-subtitulo">GALVESTON • TEXAS</p>
-            <h1 class="hero-titulo">Luxury Coastal Escape</h1>
-            <p class="hero-texto">Experience a beautifully designed beach getaway with spacious living areas, premium comfort and unforgettable coastal vibes.</p>
-            <div class="hero-acciones">
-                <a href="#gallery" class="btn-principal">Explore Property</a>
-                <a href="airbnb.com" target="_blank" class="btn-secundario">Reserve on Airbnb</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- COMPROBACIÓN SOCIAL / DATOS -->
-    <section class="metricas-barra">
-        <div class="metrica-item">
-            <h2>4 Bedrooms</h2>
-            <p>Perfect for families & groups</p>
-        </div>
-        <div class="metrica-item divisor">
-            <h2>Premium Stay</h2>
-            <p>Elegant interiors & comfort</p>
-        </div>
-        <div class="metrica-item">
-            <h2>Coastal Experience</h2>
-            <p>Relax, recharge & reconnect</p>
-        </div>
-    </section>
-
-    <!-- GALERÍA ULTRA RESPONSIVA -->
-    <section id="gallery" class="seccion-galeria">
-        <h2 class="titulo-seccion">Take a visual tour</h2>
-        <div class="cuadricula-responsiva">
-            <div class="contenedor-foto"><img src="assets/Exterior.avif"></div>
-            <div class="contenedor-foto"><img src="assets/Fly view.avif"></div>
-            <div class="contenedor-foto"><img src="assets/Living room.avif"></div>
-            <div class="contenedor-foto"><img src="assets/Dining area.avif"></div>
-            <div class="contenedor-foto"><img src="assets/Full kitchen.avif"></div>
-            <div class="contenedor-foto"><img src="assets/Workspace.avif"></div>
-        </div>
-    </section>
-
-    <!-- CALENDARIO -->
-    <section class="seccion-calendario">
-        <h2 class="titulo-seccion">Availability</h2>
-        <div id="calendar-container"></div>
-    </section>
-
-    <script src="jsdelivr.net"></script>
-    <script src="availability.js"></script>
-</body>
-</html>
+    .cuadricula-responsiva {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+    .seccion-galeria, .seccion-calendario { padding: 80px 40px; }
+}
