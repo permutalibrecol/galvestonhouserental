@@ -1,100 +1,40 @@
-async function loadCalendar() {
+document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar-container');
 
-const airbnbICS = "PASTE_YOUR_ICS_LINK_HERE";
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        locale: 'en', // Cambia a 'es' si prefieres mostrarlo en español por defecto
+        firstDay: 1,
+        headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'dayGridMonth'
+        },
+        // Fechas de prueba premium para simular reservas de Airbnb/VRBO en vivo
+        events: [
+            {
+                title: 'Airbnb Booking',
+                start: '2026-05-15',
+                end: '2026-05-19',
+                color: '#121110', // Color sofisticado oscuro a juego con el diseño
+                textColor: '#ffffff'
+            },
+            {
+                title: 'VRBO Reserved',
+                start: '2026-05-22',
+                end: '2026-05-25',
+                color: '#c5a880', // Color dorado/arena de lujo
+                textColor: '#121110'
+            },
+            {
+                title: 'Booking Direct',
+                start: '2026-05-28',
+                end: '2026-06-02',
+                color: '#121110',
+                textColor: '#ffffff'
+            }
+        ]
+    });
 
-const events = [];
-
-try {
-
-const response = await fetch(
-`https://corsproxy.io/?${encodeURIComponent(airbnbICS)}`
-);
-
-const text = await response.text();
-
-const lines = text.split('\n');
-
-let currentEvent = {};
-
-for (const line of lines) {
-
-if (line.startsWith('DTSTART')) {
-currentEvent.start = line.split(':')[1].trim();
-}
-
-if (line.startsWith('DTEND')) {
-currentEvent.end = line.split(':')[1].trim();
-}
-
-if (line.startsWith('SUMMARY')) {
-currentEvent.title = "Booked";
-}
-
-if (line === 'END:VEVENT') {
-
-if (currentEvent.start && currentEvent.end) {
-
-events.push({
-title: currentEvent.title,
-start: formatDate(currentEvent.start),
-end: formatDate(currentEvent.end),
-display: 'background',
-backgroundColor: '#ff385c',
-borderColor: '#ff385c'
+    calendar.render();
 });
-
-}
-
-currentEvent = {};
-
-}
-
-}
-
-} catch (error) {
-
-console.error("Calendar failed to load:", error);
-
-}
-
-const calendarEl = document.getElementById('calendar-container');
-
-const calendar = new FullCalendar.Calendar(calendarEl, {
-
-initialView: 'dayGridMonth',
-
-height: 750,
-
-events: events,
-
-eventDisplay: 'block',
-
-fixedWeekCount: false,
-
-showNonCurrentDates: false,
-
-headerToolbar: {
-left: 'prev,next',
-center: 'title',
-right: ''
-},
-
-dayMaxEvents: true
-
-});
-
-calendar.render();
-
-}
-
-function formatDate(dateString) {
-
-const year = dateString.substring(0,4);
-const month = dateString.substring(4,6);
-const day = dateString.substring(6,8);
-
-return `${year}-${month}-${day}`;
-
-}
-
-loadCalendar();
