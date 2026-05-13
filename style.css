@@ -1,4 +1,4 @@
-/* DISEÑO EDITORIAL DE ALTO IMPACTO */
+/* CONFIGURACIÓN Y FLUIDEZ EDITORIAL */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,7 +11,7 @@ html {
     color: #1a1816;
 }
 
-/* NAVBAR Y SELECTOR DE IDIOMA */
+/* NAVEGACIÓN SUTIL */
 .navbar-luxury {
     position: absolute;
     top: 0;
@@ -33,30 +33,30 @@ html {
     display: flex;
     align-items: center;
     gap: 8px;
-    background: rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.4);
     padding: 6px 16px;
     border-radius: 30px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.1);
 }
 .lang-btn {
     background: none;
     border: none;
-    color: rgba(255,255,255,0.6);
-    font-size: 12px;
-    font-weight: 500;
+    color: rgba(255,255,255,0.5);
+    font-size: 11px;
+    font-weight: 600;
     cursor: pointer;
     transition: color 0.3s;
 }
 .lang-btn.active, .lang-btn:hover {
-    color: #ffffff;
-    font-weight: 600;
+    color: #c5a880;
 }
 .lang-divider {
-    color: rgba(255,255,255,0.3);
-    font-size: 12px;
+    color: rgba(255,255,255,0.2);
+    font-size: 11px;
 }
 
-/* BOTÓN ACCIÓN FIJO */
+/* ACCIÓN INMEDIATA (CTA MÓVIL Y ESCRITORIO COHESIVO) */
 .cta-flotante {
     position: fixed;
     bottom: 30px;
@@ -69,18 +69,18 @@ html {
     font-weight: 600;
     letter-spacing: 2px;
     text-decoration: none;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
     z-index: 999;
     border: 1px solid rgba(255,255,255,0.1);
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 .cta-flotante:hover {
-    background-color: #ffffff;
+    background-color: #c5a880;
     color: #121110;
     transform: translateY(-4px);
 }
 
-/* HERO ASIMÉTRICO CREATIVO */
+/* PORTADA DE REVOLUCIÓN VISUAL */
 .hero-creative {
     position: relative;
     height: 100vh;
@@ -95,9 +95,8 @@ html {
     inset: 0;
     background-image: url('assets/Exterior.avif');
     background-size: cover;
-    background-center: center;
-    opacity: 0.35;
-    filter: grayscale(20%);
+    background-position: center;
+    opacity: 0.4;
 }
 .hero-inner {
     position: relative;
@@ -109,20 +108,20 @@ html {
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 .hero-title {
     font-family: 'Bodoni Moda', serif;
-    font-size: 48px;
+    font-size: 44px;
     color: #ffffff;
     line-height: 1.1;
     font-weight: 300;
     margin-bottom: 25px;
 }
 .hero-lead {
-    font-size: 16px;
+    font-size: 15px;
     color: #dcd9d6;
-    line-height: 1.7;
+    line-height: 1.8;
     font-weight: 300;
     margin-bottom: 40px;
     max-width: 600px;
@@ -140,7 +139,7 @@ html {
     text-transform: uppercase;
     text-decoration: none;
     text-align: center;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
 }
 .btn-luxury-primary {
     background-color: #c5a880;
@@ -148,18 +147,18 @@ html {
 }
 .btn-luxury-primary:hover { background-color: #ffffff; }
 .btn-luxury-secondary {
-    border: 1px solid rgba(255,255,255,0.3);
+    border: 1px solid rgba(255,255,255,0.4);
     color: #ffffff;
 }
-.btn-luxury-secondary:hover { background-color: rgba(255,255,255,0.1); }
+.btn-luxury-secondary:hover { background-color: rgba(255,255,255,0.1); border-color: #ffffff; }
 
-/* PILARES EDITORIALES */
+/* CAPA DE PILARES EXCLUSIVOS */
 .pillars-luxury {
     background-color: #1a1816;
     color: #ffffff;
     display: grid;
     grid-template-columns: 1fr;
-    padding: 60px 4%;
+    padding: 60px 6%;
     gap: 40px;
 }
 .pillar-card h3 {
@@ -170,77 +169,112 @@ html {
     margin-bottom: 12px;
 }
 .pillar-card p {
-    font-size: 14px;
+    font-size: 13px;
     color: #b5b0aa;
-    line-height: 1.6;
+    line-height: 1.7;
     font-weight: 300;
 }
 
-/* CUADRICULA EDITORIAL ASIMÉTRICA DE GALERÍA */
-.gallery-creative-section, .booking-channels-section, .calendar-creative-section {
-    padding: 100px 4%;
+/* SECCIONES Y CUADRÍCULA ASIMÉTRICA OPTIMIZADA */
+.gallery-creative-section, .experience-guide-section, .booking-channels-section, .calendar-creative-section {
+    padding: 80px 6%;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 .section-title-luxury {
     font-family: 'Bodoni Moda', serif;
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 300;
     text-align: center;
-    margin-bottom: 60px;
-    letter-spacing: 1px;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
+
+/* EN MÓVIL SE MUESTRAN COMO FILAS ORDENADAS PERFECTAMENTE */
 .editorial-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 20px;
 }
 .editorial-item {
     position: relative;
     background-color: #eae7e4;
     overflow: hidden;
-    aspect-ratio: 4/3;
+    border-radius: 4px;
 }
 .editorial-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+    display: block;
+    transition: transform 0.6s ease;
 }
 .editorial-item:hover img {
-    transform: scale(1.04);
+    transform: scale(1.03);
 }
 .img-label {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
+    bottom: 15px;
+    left: 15px;
     color: #ffffff;
-    font-size: 11px;
+    font-size: 10px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    background: rgba(0,0,0,0.4);
-    padding: 4px 12px;
+    background: rgba(18,17,16,0.7);
+    padding: 6px 14px;
+    font-weight: 500;
 }
 
-/* MULTIPLATAFORMA DE CANALES */
-.booking-channels-section {
-    background-color: #f4f2ef;
-}
-.channels-intro {
-    font-size: 15px;
-    color: #65605b;
+/* SECCIÓN INFORMATIVA DE EXPERIENCIAS DE LUJO */
+.experience-guide-section {
+    background-color: #f7f5f2;
+    border-radius: 4px;
+    margin-top: 40px;
     margin-bottom: 40px;
+}
+.guide-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+.guide-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-left: 3px solid #c5a880;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+}
+.guide-number {
+    display: block;
+    font-family: 'Bodoni Moda', serif;
+    font-size: 28px;
+    color: #c5a880;
+    margin-bottom: 10px;
+}
+.guide-card h4 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+.guide-card p {
+    font-size: 13px;
+    color: #65605b;
+    line-height: 1.7;
     font-weight: 300;
 }
+
+/* CANALES COMERCIALES */
+.booking-channels-section { background-color: #ffffff; }
 .channels-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
+    gap: 25px;
 }
 .channel-card {
-    background: #ffffff;
-    padding: 30px;
-    border: 1px solid #e2deda;
+    background: #fcfbfa;
+    padding: 35px 30px;
+    border: 1px solid #eae7e4;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -250,41 +284,44 @@ html {
 }
 .channel-card:hover {
     border-color: #c5a880;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-}
-.channel-name {
-    font-family: 'Bodoni Moda', serif;
-    font-size: 22px;
-}
-.channel-action {
-    font-size: 11px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #c5a880;
-    font-weight: 600;
-}
-
-/* CALENDARIO CONTENEDOR */
-.calendar-wrapper {
-    max-w: 900px;
-    margin: 0 auto;
     background: #ffffff;
-    padding: 30px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.03);
+    box-shadow: 0 15px 30px rgba(197,168,128,0.08);
+}
+.channel-name { font-family: 'Bodoni Moda', serif; font-size: 22px; }
+.channel-action { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: #c5a880; font-weight: 600; }
+
+/* ENTORNO CONTENEDOR DEL CALENDARIO */
+.calendar-wrapper {
+    background: #ffffff;
+    padding: 25px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+    border: 1px solid #eae7e4;
 }
 
-/* RESPONSIVE DESIGN (TABLETS Y COMPUTADORAS) */
-@media (min-width: 768px) {
-    .hero-title { font-size: 76px; }
+/* REGLAS EXCLUSIVAS PARA PC (VISUALIZACIÓN EDITORIAL REORGANIZADA) */
+@media (min-width: 992px) {
+    .hero-title { font-size: 72px; }
     .hero-buttons-group { flex-direction: row; }
-    .pillars-luxury { grid-template-columns: repeat(3, 1fr); padding: 80px 6%; }
-    .border-x-luxury { border-left: 1px solid rgba(255,255,255,0.1); border-right: 1px solid rgba(255,255,255,0.1); padding: 0 30px; }
+    .pillars-luxury { grid-template-columns: repeat(3, 1fr); padding: 80px 8%; }
+    .border-x-luxury { border-left: 1px solid rgba(255,255,255,0.1); border-right: 1px solid rgba(255,255,255,0.1); padding: 0 40px; }
     
-    /* Configuración de cuadrícula asimétrica estilo revista */
-    .editorial-grid { grid-template-columns: repeat(3, 1fr); gap: 40px; }
-    .large-panel { grid-column: span 2; grid-row: span 2; aspect-ratio: 16/10; }
-    .spatial-panel { grid-column: span 2; aspect-ratio: 21/9; }
+    /* Configuración Asimétrica de Revista para PC */
+    .editorial-grid { 
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 30px; 
+    }
+    .large-panel { 
+        grid-column: span 2; 
+        grid-row: span 2; 
+        aspect-ratio: 16/10; 
+    }
+    .spatial-panel { 
+        grid-column: span 2; 
+        aspect-ratio: 21/9; 
+    }
     
+    .guide-grid { grid-template-columns: repeat(3, 1fr); gap: 40px; }
     .channels-grid { grid-template-columns: repeat(3, 1fr); }
-    .channel-card { flex-direction: column; align-items: flex-start; gap: 40px; }
+    .channel-card { flex-direction: column; align-items: flex-start; gap: 50px; }
+    .gallery-creative-section, .experience-guide-section, .booking-channels-section, .calendar-creative-section { padding: 100px 8%; }
 }
